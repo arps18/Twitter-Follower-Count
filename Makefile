@@ -4,12 +4,12 @@
 # -----------------------------------------------------------
 spark.root=/usr/local/spark-3.4.0-bin-without-hadoop
 hadoop.root=/usr/local/hadoop-3.3.5
-app.name=Word Count
+app.name=Twitter Joins
 jar.name=spark-demo.jar
 maven.jar.name=spark-demo-1.0.jar
-job.name=wc.WordCountMain
+job.name=TwitterJoinsMain
 local.master=local[4]
-local.input= input/hhg.txt
+local.input=input/Twitter-dataset/data/edges.csv
 local.output=output
 # Pseudo-Cluster Execution
 hdfs.user.name=joe

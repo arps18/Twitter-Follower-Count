@@ -296,6 +296,66 @@
         </exclusion>
       </exclusions>
     </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-sql_2.12</artifactId>
+      <version>3.2.0</version>
+      <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>rocksdbjni</artifactId>
+          <groupId>org.rocksdb</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>univocity-parsers</artifactId>
+          <groupId>com.univocity</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spark-sketch_2.12</artifactId>
+          <groupId>org.apache.spark</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spark-catalyst_2.12</artifactId>
+          <groupId>org.apache.spark</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>orc-core</artifactId>
+          <groupId>org.apache.orc</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>orc-mapreduce</artifactId>
+          <groupId>org.apache.orc</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>hive-storage-api</artifactId>
+          <groupId>org.apache.hive</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>parquet-column</artifactId>
+          <groupId>org.apache.parquet</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>parquet-hadoop</artifactId>
+          <groupId>org.apache.parquet</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spark-tags_2.12</artifactId>
+          <groupId>org.apache.spark</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jackson-databind</artifactId>
+          <groupId>com.fasterxml.jackson.core</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>xbean-asm9-shaded</artifactId>
+          <groupId>org.apache.xbean</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>unused</artifactId>
+          <groupId>org.spark-project.spark</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
   </dependencies>
   <properties>
     <spark.version>3.3.2</spark.version>
