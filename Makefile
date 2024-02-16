@@ -9,6 +9,7 @@ jar.name=spark-demo.jar
 maven.jar.name=spark-demo-1.0.jar
 #job.name=FollowerCountMain
 job.name = wc.RsRMain
+#job.name = wc.RSDMain
 local.master=local[4]
 local.input=input/Twitter-dataset/data/edges.csv
 local.output=output
