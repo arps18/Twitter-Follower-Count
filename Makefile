@@ -8,6 +8,7 @@ app.name=Twitter Joins
 jar.name=spark-demo.jar
 maven.jar.name=spark-demo-1.0.jar
 job.name=FollowerCountMain
+#job.name = wc.RsRMain
 local.master=local[4]
 local.input=input/Twitter-dataset/data/edges.csv
 local.output=output
@@ -17,12 +18,12 @@ hdfs.input=input
 hdfs.output=output
 # AWS EMR Execution
 aws.emr.release=emr-6.10.0
-aws.bucket.name=cs6240-spark-bucket-arpan
+aws.bucket.name=spark-rsr-arpan
 aws.input=input
 aws.output=output
 aws.log.dir=log
-aws.num.nodes=2
-aws.instance.type=m3.xlarge
+aws.num.nodes=7
+aws.instance.type=m6a.xlarge
 # -----------------------------------------------------------
 
 # Compiles code and builds jar (with dependencies).
@@ -124,7 +125,7 @@ aws: jar upload-app-aws delete-output-aws
 # Download output from S3.
 download-output-aws: clean-local-output
 	mkdir ${local.output}
-	aws s3 sync s3://${aws.bucket.name}/ ${local.output}
+	aws s3 sync s3://${aws.bucket.name} s3bucket/${local.output}
 
 # Change to standalone mode.
 switch-standalone:
