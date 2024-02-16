@@ -19,7 +19,7 @@ object RsRMain {
     val XtoY =
       textFile.map(line => {
           line.split(",")
-        }).filter(users => users(0).toInt < 10000 && users(1).toInt < 10000)
+        }).filter(users => users(0).toInt < 40000 && users(1).toInt < 40000)
         .map(users => (users(0), users(1)))
 
 
