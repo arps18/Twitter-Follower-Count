@@ -25,7 +25,7 @@ class RSDMain {
     val XtoY =
       textFile.map(line => {
           line.split(",")
-        }).filter(users => users(0).toInt < 10000 && users(1).toInt < 10000)
+        }).filter(users => users(0).toInt < 50000 && users(1).toInt < 50000)
         .map(users => Row(users(0), users(1)))
 
 
