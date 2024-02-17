@@ -11,6 +11,7 @@ maven.jar.name=spark-demo-1.0.jar
 #job.name = wc.RsRMain
 #job.name = wc.RSDMain
 job.name = wc.RepRMain
+job.name = wc.RepDMain
 local.master=local[4]
 local.input=input/Twitter-dataset/data/edges.csv
 local.output=output
