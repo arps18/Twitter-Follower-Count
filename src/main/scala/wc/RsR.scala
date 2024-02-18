@@ -11,7 +11,7 @@ object RsRMain {
       logger.error("Usage:\nrs.RSR <input dir> <output dir>")
       System.exit(1)
     }
-    val conf = new SparkConf().setAppName("RS R")
+    val conf = new SparkConf().setAppName("RS_R")
     val sc = new SparkContext(conf)
 
     val textFile = sc.textFile(args(0))
@@ -19,7 +19,7 @@ object RsRMain {
     val XtoY =
       textFile.map(line => {
           line.split(",")
-        }).filter(users => users(0).toInt < 40000 && users(1).toInt < 40000)
+        }).filter(users => users(0).toInt < 10000 && users(1).toInt < 10000)
         .map(users => (users(0), users(1)))
 
 
@@ -37,7 +37,6 @@ object RsRMain {
     val ZtoX = XtoY.map {
       case (user1, user2) => ((user1, user2), "")
     }
-
 
     val socialTriangle = pathLength2.join(ZtoX)
 

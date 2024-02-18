@@ -38,6 +38,6 @@ object RepRMain {
     }
 
     socialTriangleCount.collect()
-    println("SocialTriangle Count " + accum.value/3)
+    println("Social Triangle Count: " + accum.value/3)
   }
 }

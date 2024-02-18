@@ -45,7 +45,7 @@ object RepDMain {
       .join(broadcast(df.as("ZtoX")),
         $"Path.df2_Y" === $"ZtoX.userIdX" && $"Path.df1_X" === $"ZtoX.userIdY")
 
-    println("Social Triangle Count" + socialTriangle.count()/3)
+    println("Social Triangle Count: " + socialTriangle.count()/3)
     println(socialTriangle.queryExecution.executedPlan)
   }
 }

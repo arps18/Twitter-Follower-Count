@@ -8,8 +8,8 @@ app.name=Twitter Joins
 jar.name=spark-demo.jar
 maven.jar.name=spark-demo-1.0.jar
 #job.name=FollowerCountMain
-#job.name = wc.RsRMain
-job.name = wc.RsDMain
+job.name = wc.RsRMain
+#job.name = wc.RsDMain
 #job.name = wc.RepRMain
 #job.name = wc.RepDMain
 local.master=local[4]
@@ -25,7 +25,7 @@ aws.bucket.name=spark-repr-bucket
 aws.input=input
 aws.output=output
 aws.log.dir=log
-aws.num.nodes=7
+aws.num.nodes=4
 aws.instance.type=m6a.xlarge
 # -----------------------------------------------------------
 
