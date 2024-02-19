@@ -1,0 +1,21 @@
+Social Triangle Count: 520296
+AdaptiveSparkPlan isFinalPlan=false
++- SortMergeJoin [df2_Y#11, df1_X#6], [userIdX#20, userIdY#21], Inner
+   :- Sort [df2_Y#11 ASC NULLS FIRST, df1_X#6 ASC NULLS FIRST], false, 0
+   :  +- Exchange hashpartitioning(df2_Y#11, df1_X#6, 1000), ENSURE_REQUIREMENTS, [plan_id=579]
+   :     +- SortMergeJoin [df1_Y#7], [df2_X#10], Inner, NOT (df1_X#6 = df2_Y#11)
+   :        :- Sort [df1_Y#7 ASC NULLS FIRST], false, 0
+   :        :  +- Exchange hashpartitioning(df1_Y#7, 1000), ENSURE_REQUIREMENTS, [plan_id=572]
+   :        :     +- Project [userIdX#2 AS df1_X#6, userIdY#3 AS df1_Y#7]
+   :        :        +- Filter (isnotnull(userIdY#3) AND isnotnull(userIdX#2))
+   :        :           +- Scan ExistingRDD[userIdX#2,userIdY#3]
+   :        +- Sort [df2_X#10 ASC NULLS FIRST], false, 0
+   :           +- Exchange hashpartitioning(df2_X#10, 1000), ENSURE_REQUIREMENTS, [plan_id=573]
+   :              +- Project [userIdX#14 AS df2_X#10, userIdY#15 AS df2_Y#11]
+   :                 +- Filter (isnotnull(userIdX#14) AND isnotnull(userIdY#15))
+   :                    +- Scan ExistingRDD[userIdX#14,userIdY#15]
+   +- Sort [userIdX#20 ASC NULLS FIRST, userIdY#21 ASC NULLS FIRST], false, 0
+      +- Exchange hashpartitioning(userIdX#20, userIdY#21, 1000), ENSURE_REQUIREMENTS, [plan_id=580]
+         +- Filter (isnotnull(userIdX#20) AND isnotnull(userIdY#21))
+            +- Scan ExistingRDD[userIdX#20,userIdY#21]
+
