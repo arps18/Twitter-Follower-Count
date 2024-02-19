@@ -1,15 +1,1 @@
-Social Triangle Count: 2628806
-AdaptiveSparkPlan isFinalPlan=false
-+- BroadcastHashJoin [df2_Y#11, df1_X#6], [userIdX#24, userIdY#25], Inner, BuildRight, false
-   :- BroadcastHashJoin [df1_Y#7], [df2_X#10], Inner, BuildRight, NOT (df1_X#6 = df2_Y#11), false
-   :  :- Project [userIdX#2 AS df1_X#6, userIdY#3 AS df1_Y#7]
-   :  :  +- Filter (isnotnull(userIdY#3) AND isnotnull(userIdX#2))
-   :  :     +- Scan ExistingRDD[userIdX#2,userIdY#3]
-   :  +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, false]),false), [plan_id=303]
-   :     +- Project [userIdX#14 AS df2_X#10, userIdY#15 AS df2_Y#11]
-   :        +- Filter (isnotnull(userIdX#14) AND isnotnull(userIdY#15))
-   :           +- Scan ExistingRDD[userIdX#14,userIdY#15]
-   +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, false], input[1, string, false]),false), [plan_id=306]
-      +- Filter (isnotnull(userIdX#24) AND isnotnull(userIdY#25))
-         +- Scan ExistingRDD[userIdX#24,userIdY#25]
-
+Social Triangle Count: 520296
