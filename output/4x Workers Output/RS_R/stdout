@@ -1,4 +1,4 @@
-Social Triangle Count2628806
+Social Triangle Count: 2628806
 AdaptiveSparkPlan isFinalPlan=false
 +- BroadcastHashJoin [df2_Y#11, df1_X#6], [userIdX#24, userIdY#25], Inner, BuildRight, false
    :- BroadcastHashJoin [df1_Y#7], [df2_X#10], Inner, BuildRight, NOT (df1_X#6 = df2_Y#11), false
